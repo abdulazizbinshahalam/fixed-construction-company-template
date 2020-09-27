@@ -1,0 +1,711 @@
+* {
+	box-sizing: border-box;
+}
+body {
+margin: 0px;
+padding: 0px;
+font-family: sans-serif;
+ }
+
+.header {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../img/hero.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 80%;
+	height: auto;
+	margin: auto;
+	padding: 10px 0px;
+	background-color: transparent;
+
+	
+}
+.logo strong {
+	display: inline-block;
+	padding:0px 10px;
+	background-color: #39B5DE;
+	letter-spacing: 5px;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+} /*<-- logo done here */
+
+
+
+.navbar ul {
+	margin: 0px;
+	padding: 0px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.navbar ul li  {
+	display: inline-block;
+	margin-left: 30px;
+	position: relative;
+
+}
+.navbar ul li a {
+	text-decoration: none;
+	color: rgba(0,0,0,.5);
+	transition: .4s;
+	position: relative;
+	z-index: 1;
+}
+
+
+.navbar ul li:nth-child(1) a {
+	color: white;
+}
+
+.navbar ul li a:hover {
+	color: white;
+}
+
+.navbar ul li a::before {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 0%;
+	height: 20px;
+	background: linear-gradient(-45deg,#ffd520 50%, black 50%);
+	top: -2px;
+	transition: 0.4s;
+	z-index: -1;
+}
+
+.navbar ul li a:hover::before,.navbar ul li:nth-child(1) a::before{
+	width: 100%;
+}
+/* <<- navbar done here */
+
+.header .hero-text h1 {
+	font-family: sans-serif;
+	color: white;
+	margin: 10% 0% 0% 10%;
+}
+
+.header .hero-text-about p {
+	width:280px;
+	margin-left: 10%;
+	height: auto;
+	text-align: justify;
+	font-weight: 700;
+	color:rgb(0,0,0);
+	transition: 2s;
+}
+
+.header .explore-btn a {
+	text-decoration: none;
+	display: inline-block;
+	margin-left: 10%;
+	font-weight: bold;
+	color: black;
+	background-color:#ffd52096;
+	border-radius: 3px;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	transition: .4s;
+}
+.header .explore-btn a:hover {
+	background-color:  #ffd520;
+
+}
+
+.header .explore-btn a img {
+	object-fit: scale-down;
+	max-width: 100%;
+	height: auto;
+	transition: .5s;
+}
+
+.explore-btn a:hover img {
+	transform: translateX(10px);
+}
+.explore-btn a:active img{
+	animation-name:movingtruck;
+	animation-duration: .4s;
+}
+
+@keyframes movingtruck {
+	0% {transform: rotateZ(0deg);}
+	100% {
+		transform: rotateZ(360deg);
+	}
+	 }
+ /* explore btn done here */
+
+/* header done here */
+
+.services {
+	width: 100%;
+	height: 100vh;
+	display: inline-block;
+background: linear-gradient(35deg,#ffd520 50%, black 50%);}
+
+.services-header {
+	width: 40%;
+	height: auto;
+	margin: auto;
+	background-color: transparent;
+
+}
+
+.services-header h2{
+	text-align: center;
+	color: rgba(255,255,255,.5);
+	font-family: roboto;
+ }
+ .services-header p {
+ 	text-align: center;
+ 	color: rgba(255,255,255,.5);
+
+ }
+
+.services-container a{
+	text-decoration: none;
+	color: rgba(0,0,0,.5);
+	font-size: 40px;
+	transition: .5s;
+
+}
+.services-container a:hover {
+	color:black;
+}
+
+a.services-next {
+	color: rgba(255, 255, 0, 0.62);
+
+}
+a.services-next:hover {
+	color: yellow;
+}
+
+.services-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0% 10%;
+}
+
+ .section-services {
+ 	width:90%;
+ 	height: 50vh;
+ 	background-color: rgba(255,255,255,05);
+ 	margin: auto;
+ 	position: relative;
+ 	padding: 10px 20px;
+ 	display: flex;
+ 	justify-content: space-between;
+ 	overflow: hidden;
+
+ }
+
+ .section-services .section-services-left {
+ 	width: 50%;
+ 	height: auto;
+ 	text-align: justify;
+ 	padding-top: 10%;
+ }
+
+.section-services .section-services-left p {
+	color: rgba(0,0,0,.5);
+ 	transition: .4s;
+}
+ .section-services .section-services-left p:hover {
+ 	color: black;
+ }
+
+.section-services .section-services-right img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.services-svg {
+	text-align: center;
+}
+
+.services-svg svg {
+	stroke: yellow;
+	stroke-width: 3;
+	fill:black;
+	cursor: pointer;
+}
+.services-svg svg:nth-child(1){
+stroke: black;
+stroke-width: 3;
+fill: yellow;
+} /* <-- services done here--> */
+
+.products {
+	width: 100%;
+	height: 100vh;
+	display: inline-block;
+}
+
+.products-header {
+	text-align: center;
+	text-transform: uppercase;
+}
+.products-header h2 {
+	font-weight: bolder;
+	letter-spacing: 1px;
+}
+.products-navbar {
+	width: 60%;
+	height: auto;
+	margin: auto;}
+
+.products-navbar ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10%;
+}
+
+.products-navbar ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bolder;
+	color: rgba(0,0,0,.7);
+	transition: .4s;
+	position: relative;
+}
+.products-navbar ul li a:hover {
+	color: black;
+}
+
+.products-navbar ul li:nth-child(1) a {
+	color: black;
+}
+.products-navbar ul li a::after {
+	position: absolute;
+	background-color: yellow;
+	display: block;
+	width: 0%;
+	height: 5px;
+	content: "";
+	border-radius: 5px;
+	transition: .4s;
+}
+
+.products-navbar ul li a:hover::after, .products-navbar ul li:nth-child(1) a::after {
+	width: 100%;
+}
+.products-section {
+	width: 60%;
+	height: 60vh;
+	margin: 30px auto 0px;
+	padding: 0px 25px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+
+}
+
+.products-section > .products-section-container {
+	width: 25%;
+	height: 45%;
+	background-color: red;
+	margin: 10px 10px 0px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	transition: .5s;
+}
+
+.products-section-container:hover {
+		box-shadow: 3px 4px 10px rgba(0,0,0,.5);
+}
+.products-section-container img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	transition: .5s;
+}
+
+.products-section-container:hover img {
+	transform: scale(2,2);
+}
+.products-section-container .overlay {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: rgba(255,255,255,0.5);
+	opacity: 0;
+	transition: .5s;
+}
+
+.products-section-container .overlay:hover {
+	opacity: 1;
+
+}
+
+.products-section-container .overlay .overlay-text {
+
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+font-size: 15px;
+}/* <-- services done here--> */
+
+.contacts {
+	width: 100%;
+	height: 80vh;
+	background:  url(../img/form-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.contacts-header {
+	text-align: center;
+	width: 60vw;
+	height: auto;
+	text-transform: uppercase;
+	margin: auto;
+}
+.contacts-header h2 {
+	letter-spacing: 1px;
+}
+.contacts-form .form form {
+	width: 80vw;
+	height: auto;
+	margin: 100px auto 0px;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+
+}
+
+span {
+	display: inline-block;
+	width: initial;
+	height: auto;
+;
+}
+span:nth-child(1), span:nth-child(2) {
+	width: 50%;
+
+	}
+
+
+span input {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-bottom: 3px solid rgba(0,0,0,.5);
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+}
+span:nth-child(1) {
+	padding-right: 10px;
+}
+
+span:nth-child(2) {
+	padding-left: 10px;
+}
+span.form-textarea {
+	width: 100%;
+}
+ textarea {
+	width: 100%;
+	height: 150px;
+	display: inline-block;
+	resize: vertical;
+	margin-top: 10px;
+	border: none;
+	border-bottom: 3px solid rgba(0,0,0,.5);
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+	padding: 10px;
+}
+
+
+::placeholder {
+	font-family: sans-serif;
+}
+
+/*  now let's make a hover on span after to make look form more stylish */
+
+span:nth-child(1)::after, span:nth-child(2)::after {
+position: absolute;
+content: "";
+width: 0%;
+height: 5px;
+display: block;
+background:linear-gradient(to right, black 50%, yellow 50%);
+top: 33px;
+transition: .5s;
+}
+
+span:nth-child(1):hover::after, span:nth-child(2):hover::after {
+	width: 49%;
+}
+
+span.form-textarea::after {
+position: absolute;
+content: "";
+width: 0%;
+height: 5px;
+display: block;
+background:linear-gradient(to right, black 50%, yellow 50%);
+bottom: 59px;
+transition: .5s;
+}
+span.form-textarea:hover::after {
+	width: 100%;
+}
+
+/* form using after property done here */
+#submit {
+	cursor: pointer;
+	width: 100px;
+	padding: 10px 0px;
+	border-radius: 5px;
+	outline: none;
+	text-transform: uppercase;
+	margin: 20px auto 0px;
+	background: linear-gradient(to bottom right, rgba(255, 152, 0, 1) 50%, rgba(0, 0, 0, 1) 50%);	
+	border: none;
+ 	color: white;
+	font-weight: bold;}
+
+
+/* ================
+contacts section done here
+============*/
+
+.about {
+	width: 100%;
+	height: 100vh;
+	display: inline-block;
+	margin: auto;
+}
+
+.about-header h2 {
+	text-transform: uppercase;
+	color: black;
+	text-align: center;
+}
+
+.about-container {
+	width: 1000px;
+	height: 400px;
+	background-image: url(../img/excavator.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: auto;
+	overflow: hidden;
+}
+.about-container-child{
+	width: 3000px;
+	height: 400px;
+	background: repeating-linear-gradient(to right,rgba(255, 208, 0, 0.884) 10.5%,rgba(0, 0, 0, 0.651) 55.3%);
+	display: flex;
+	position: relative;
+	animation-name: child;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes child {
+	0% { left: 0px;
+
+	}
+	19% {left: 0px;
+		
+	}
+	22% {
+		left:-1000px;
+	}
+	37% {left: -1000px;
+		
+	}
+	56% {left: -1000px;
+		
+	}
+	59% {
+		left: -2000px;
+	}
+	77% {left: -2000px;
+		
+	}
+	96% {left: -2000px;
+		
+	}
+	100% {left: 0px;
+		
+	}
+}
+.about-container-child p {
+	width: 1000px;
+	height: 400px;
+	display: inline-block;
+
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	top: 50%;
+	color: white;
+	font-weight: bolder;
+
+}
+
+.about-container-state {
+	width: 200px;
+	height: 100px;
+	margin: auto;
+}
+
+.about-container-state svg circle{
+	fill: black;
+	stroke: yellow;
+	stroke-width: 3;
+	cursor: pointer;
+	transition: .4s;
+	
+}
+
+
+
+.about-container-state svg:hover circle {
+	fill:yellow;
+	stroke: black;
+	stroke-width: 3;
+	r: 15;
+}
+
+/* ================
+about us section done here
+============*/
+
+.footer {
+	width: 100%;
+	height: 60vh;
+	background: url("../img/header bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+}
+
+.footers-section {
+	width: 100%;
+	height: 60vh;
+	background: linear-gradient(to right, rgba(255, 208, 1, 0.842) 40%,rgba(0, 0, 0, 0.842)10%);
+	display: flex;
+	justify-content:space-around;
+}
+
+.footers-header {
+	margin-top: 5%;
+}
+
+.footers-header .column-one {
+	display: inline-flex;
+	flex-direction: column;
+	width: 60%;
+	text-transform: uppercase;
+
+
+}
+.footers-header .column-one h2 {
+	font-size: 10px;
+}
+.footers-header .column-one h2 span.premier {
+	font-size: 28px;
+	
+}
+
+
+
+.footers-header .column-two strong {
+	padding: 10px 15px;
+	display: inline-block;
+	background-color: gray;
+	cursor: pointer;
+	transition: .5s;
+	border-radius: 5px;
+}
+.footers-header .column-two strong:hover {
+	box-shadow: 3px 3px 10px rgba(0,0,0,.8);
+	transform: scale(2,2);
+}
+.column-two strong:nth-child(1):hover{
+	background: rgba(0, 102, 255, 0.986);
+	color: white;
+}
+.column-two strong:nth-child(2):hover{
+	background: linear-gradient(rgb(247, 0, 255),rgb(238, 12, 50));
+	color: white;
+}
+.column-two strong:nth-child(3):hover{
+	background: rgba(255, 0, 43, 0.986);
+	color: white;
+}
+.column-two strong:nth-child(4):hover{
+	background: rgb(0, 217, 255);
+	color: white;
+}
+
+.footers-article {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width: 40%;
+	color: white;
+	text-align: center;
+}
+
+.head-office {
+	width: 200px;
+}
+.studio-office {
+	width: 200px;
+}
+
+.footers-article {
+	margin-top: 5%;
+}
+
+.trademark {
+	text-align: center;
+	position: relative;
+	top: -10%;
+	color: white;
+}
+/* ================
+footer section done here and i'm done here
+============*/
